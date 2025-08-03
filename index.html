@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PicMyLaptop - Your Smart Laptop Assistant</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #2e86de;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin: 5px 0 0 0;
+      font-size: 1.2rem;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 30px 10px;
+      background: #fff;
+    }
+    .feature {
+      background: #f8f8f8;
+      margin: 10px;
+      padding: 20px;
+      border-radius: 10px;
+      flex: 0 1 250px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .feature h3 {
+      margin-top: 0;
+    }
+    .cta {
+      background: #2e86de;
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+    }
+    .cta button {
+      background: #fff;
+      color: #2e86de;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .cta button:hover {
+      background: #dff0ff;
+    }
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>PicMyLaptop</h1>
+    <p>Your Smart Laptop Recommendation Assistant</p>
+  </header>
+
+  <section class="features">
+    <div class="feature">
+      <h3>Tailored Suggestions</h3>
+      <p>Get laptop recommendations that match your exact needs.</p>
+    </div>
+    <div class="feature">
+      <h3>Compare Models</h3>
+      <p>Side-by-side comparisons to make the best choice easily.</p>
+    </div>
+    <div class="feature">
+      <h3>Stay Updated</h3>
+      <p>Discover the latest laptops and technology trends.</p>
+    </div>
+    <div class="feature">
+      <h3>Budget Friendly</h3>
+      <p>Find the best laptops within your budget without compromises.</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to find your perfect laptop?</h2>
+    <button>Get Started</button>
+  </section>
+
+  <footer>
+    &copy; 2025 PicMyLaptop. All rights reserved.
+  </footer>
+
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "d358a175-5557-4f5f-a074-830b5bad4bc2",
+      region: "eu-de",
+      serviceInstanceID: "c3d5cafd-635f-4629-b2f9-4f3347b19be0",
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t = document.createElement('script');
+      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t)
